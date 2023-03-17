@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+  </head>
+   
+<style>
+    body {
+        background: rgb(11, 11, 75)
+    }
+
+
+    h1 {
+        text-align: center;
+    }
+
+
+    h2 {
+        text-align: center;
+    }
+
+
+    img {
+        max-width:100%;
+        
+    }
+
+    p {
+        font-size: 18px;
+        line-height: 1.5;
+    }
+
+
+    .container {
+        text-align: center;
+        background-color: beige;
+        margin: 65px 250px;
+        padding: 90px;
+        border-radius: 10px;
+    }
+
+
+    button {
+        display: block;
+        margin: 0 auto;
+        border: 1px solid lavenderblush;
+        background: whitesmoke;
+        font-size: 20px;
+        border-radius: 5px;
+        padding: 12px 14px;
+        transition: all 150ms ease-in-out
+    }
+
+
+    button:hover {
+        background: lightslategray
+        cursor: pointer;
+    }
+
+
+    .theme-button {
+        font-size: 12px;
+        background: black;
+        color: white;
+        padding; 5 8px;
+    }
+
+
+    .theme-buttton:hover {
+         color: black;
+         background: white;
+    }
+
+
+    .grid {
+        margin: 15px 0;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-gap: 20px
+    }
+
+    .grid img {
+        width: 100%;
+        border-radius: 8px
+        object-fit: cover;
+        padding: 10px 5px;
+    }
+
+
+    .dice-picture {
+        border-radius: 12px;
+        transition: all 150ms ease-in-out;
+        width: 400px;
+    }
+
+
+    .dice-picture:hover {
+    opacity: 0.5;
+    filter: contrast(50%);
+    transform: scale(1.2);
+    }
+
+    .dark{
+    backround:black
+    color: white;
+    }
+
+    .dark .container {
+        background: rgb(156, 154, 154);
+    }
+
+    .dark a {
+        color: peru;
+    }
+</style>
+  <body class="dark"> 
+    <button class="theme-button">change theme</button>
+    <div class="container">
+    <h1>Dungeons and Dragons</h1>
+    <h2>My favorite hobby</h2>
+
+    
+    <a href="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/070/298/original/timothy-dykes-woE5Fc1HF1o-unsplash.jpg?1678129833"
+    target="_blank">
+    <img
+      src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/070/298/original/timothy-dykes-woE5Fc1HF1o-unsplash.jpg?1678129833"
+      class="dice-picture"
+    />
+
+
+    <div class="grid">
+    
+    <img
+      src="https://liveboldandbloom.com/wp-content/uploads/2020/06/clint-bustrillos-X-A-LJVAhzk-unsplash-1-e1591909250240-768x631.jpg"
+    />
+    <img
+      src="https://www.gamersdecide.com/sites/default/files/styles/news_images/public/image2_3.jpg"
+    />
+    <img
+      src="https://preview.redd.it/pq61m18mmzp51.jpg?width=960&crop=smart&auto=webp&v=enabled&s=45a9eb1ca76bdff0b1f6f642dbeff3f1c4a8a142"
+    />
+    <img
+    src="https://www.wargamer.com/wp-content/sites/wargamer/2022/12/dnd-owlbear-5e-pulling-chariot.jpg"
+    />
+    
+   </div>
+
+    <p>
+      Dungeons & Dragons is a fantasy tabletop role-playing game originally
+      designed by Gary Gygax and Dave Arneson. The game was first published in
+      1974 by Tactical Studies Rules, Inc. It has been published by Wizards of
+      the Coast since 1997.
+
+      Dungeons & Dragons is a structured yet open-ended role-playing game. It is normally played indoors with the participants seated around a tabletop. Typically, one player takes on the role of Dungeon Master (DM) while the others each control a single character, representing an individual in a fictional setting. When working together as a group, the player characters (PCs) are often described as a "party" of adventurers, with each member often having their own area of specialty which contributes to the success of the whole. During the course of play, each player directs the actions of their character and their interactions with other characters in the game. This activity is performed through the verbal impersonation of the characters by the players, while employing a variety of social and other useful cognitive skills, such as logic, basic mathematics and imagination. A game often continues over a series of meetings to complete a single adventure, and longer into a series of related gaming adventures, called a campaign.
+    </p>
+
+    <footer>Coded by Katy Raymond</footer>
+
+    /div>
+
+    <script>
+        function changeTheme() {
+        let body = document.querySelector("body");
+
+        if (body.classlist.contains("dark")) {
+            body.classlist.remove("dark");
+        } else {
+            body.classList.add("dark");
+        }
+        }
+
+        let themeButton = document.querySelector(".theme-button");
+        themeButton.addEventListener("click", changeTheme);
+    </script>
+  </body>
+</html>

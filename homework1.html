@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pandora weather</title>
+  </head>
+  <body></body>
+</html>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <style>
+      img {
+        display: block;
+        margin: 0 auto;
+      }
+      h1 {
+        text-align: center;
+        display: block;
+        color: coral;
+      }
+      h2 {
+        text-align: center;
+        padding: 12px 15px;
+      }
+      .future-temps {
+        text-align: center;
+        padding: 0px;
+        font-size: 20px;
+      }
+      button {
+        text-align: center;
+        display: block;
+        background-color: rgb(67, 157, 218);
+        color: rgb(32, 24, 82);
+        margin: 50px auto 30px;
+        padding: 15px 20px;
+        border: 2px solid rgb(45, 45, 51);
+        border-radius: 45px;
+        box-shadow: 10px 5px 5px rgb(179, 207, 243);
+        transition: all 310ms ease-in-out;
+      }
+      button:hover {
+        background: rgb(78, 80, 216);
+        color: blue;
+        cursor: pointer;
+        transition: ease-in-out;
+      }
+      p {
+        text-align: center;
+        font-size: 12px;
+        opacity: initial;
+        color: lightslategray;
+      }
+    </style>
+    <img
+      src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSHWUDmGALGyBByLZIAULW89IV4C6shfEQO_eZgUObFGw&s"
+      width="100"
+    />
+    <h1>
+      <span>Currently 55 &#176; in Pandora </span>
+    </h1>
+    <h2>42 &#176;/ 54 &#176;</h2>
+    <ul class="future-temps" style="list-style-type: none">
+      <li>
+        <img src="https://tinyurl.com/23febx48" width="50" />🌤
+        <strong>Tomorrow</strong>
+      </li>
+      <br />
+      <li>45 &#176;/<strong>62 &#176;</strong></li>
+      <br />
+      <br />
+      <br />
+      <li>
+        <img src="https://tinyurl.com/55dby482" width="30" />
+        <strong>Saturday</strong>
+      </li>
+      <br />
+      <li>56 &#176;/<strong>59 &#176;</strong></li>
+      <br />
+      <br />
+      <br />
+      <li>
+        <img src="https://tinyurl.com/55dby482" width="30" />
+        <strong>Sunday</strong>
+      </li>
+      <br />
+      <li>80 &#176;/<strong>92 &#176;</strong></li>
+    </ul>
+    <button class="change-button">Change planet</button>
+    <p>Coded by Katy Raymond</p>
+
+    <script>
+      function changePlanet() {
+        let planet = prompt("which planet would you like to see?");
+        let temperature = prompt("what temperature is it?");
+        if (temperature < 28) {
+          let heading = document.querySelector("h1");
+          heading.innerHTML =
+            "<br />Currently " + temperature + "C in " + planet;
+        } else {
+          let heading = document.querySelector("h1");
+          heading.innerHTML =
+            "<br />Currently " + temperature + "C in " + planet;
+
+          alert("Warm! Yay!");
+        }
+      }
+      let changeButton = document.querySelector("button");
+      changeButton.addEventListener("click", changePlanet);
+    </script>
+  </head>
+</html>
