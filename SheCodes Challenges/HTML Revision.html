@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Plus Week 1</title>
+  </head>
+  <style>
+    body {
+      text-align: center;
+      font-family: cerebri sans, Helvetica, Arial, sams-serif;
+    }
+
+    h1 {
+      font-weight: 900;
+      font-size: 34px;
+      line-height: 48px;
+      margin: 60px 0 0;
+      color: #272044;
+    }
+    h2{
+      color: #272044;
+      font-weight: 900;
+      font-size: 34px;
+      line-height: 48px;
+      margin: 0;
+      padding: 0 0 24px;
+      color: #8064e9;
+    }
+
+      button {
+        border-radius: 25px;
+        display: block;
+        background: #8064e9;
+        color: #fff;
+        line-height: 22px;
+        margin: 60px auto;
+        margin-top: 50px;
+        padding: 16px 24px;
+        border: 1px solid #8064e9;
+        box-shadow: 7px 5px 12px rgb(0, 0, 0.1);
+        transition: all 310ms ease;
+        font-size: 18px;
+        text-decoration: none;
+      }
+      button:hover {
+        background: #8064e9;
+        color: rgb(192, 227, 238);
+        cursor: pointer;
+        transition: ease-in-out;
+        border: none;
+      }
+
+    p {
+      text-align: center;
+      font-size: 18px;
+      line-height: 28px;
+      font-family: pt mono, monospace;
+    }
+  </style>
+  <body>
+    <h1>SheCodes is a Coding Workshop for Women</h1>
+    <br />
+    <br />
+    <h2>Access a new career in Technology</h2>
+    <br />
+    <p>SheCodes teaches coding, design, and managment skills to women</p>
+    <br />
+    <strong> Only 25 spots available! </strong>
+
+    <p>
+      <button class="link" </button>
+      <a href="https://www.shecodes.io"> Apply now </a>
+    </p>
+  </body>
+  <script>
+    function changeTheme() {
+      let body = document.querySelector("body");
+
+      if (body.classlist.contains("dark")) {
+        body.classlist.remove("dark");
+      } else {
+        body.classList.add("dark");
+      }
+    }
+
+    let themeButton = document.querySelector(".theme-button");
+    themeButton.addEventListener("click", changeTheme);
+  </script>
+</html>
